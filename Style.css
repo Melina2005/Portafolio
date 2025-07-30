@@ -1,0 +1,203 @@
+:root {
+  --fondo: #121212;
+  --morado: #80009d;
+  --Verde: #906e00;
+  --blanco: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--blanco);
+}
+
+header {
+  background: var(--fondo);
+  text-align: center;
+}
+
+.logo {
+  color: var( --Verde);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--blanco);
+  text-shadow: 2px 2px var(--verde)
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--morado);
+}
+
+.hero {
+  margin: 30px;
+}
+
+.btn {
+  background: var(--morado); /* Color base morado */
+  color: var(--blanco);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.btn:hover {
+  background: var(--Verde); /* Hover en verde */
+  color: var(--fondo);
+}
+
+
+section {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.skills-container, .projects-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill-card, .project-card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cv-buttons {
+  margin-top: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+}
+
+.Titulos {
+  font-size: 2 rem; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+  color: var(--morado); /* Color principal */
+  margin-bottom: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#nav-linksBox {
+  position: sticky;    /* Hace que se quede fijo al hacer scroll */
+  top: 0;              /* Siempre en la parte superior */
+  padding: 10px 0;
+  background-color: #1e1e1e;
+  z-index: 1000;       /* Para que quede encima del contenido */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra para destacar */
+}
+
+#nav-linksBox .nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#nav-linksBox .nav-links li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+#nav-linksBox .nav-links li a:hover {
+  color: var(--morado); /* Hover morado */
+}
+
+#foto {
+  width: 20vw;           /* 20% del ancho de la ventana */
+  max-width: 250px;      /* Máximo tamaño para pantallas grandes */
+  min-width: 150px;      /* Mínimo tamaño para pantallas pequeñas */
+  height: auto;          /* Mantiene proporción */
+  
+  object-fit: cover;     
+  border-radius: 50%;    
+  border: 4px solid var(--morado);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  display: block;
+  margin: 20px auto;
+}
+
+#contacto form input,
+#contacto form textarea {
+  background: #1e1e1e;               /* Fondo gris oscuro */
+  border: 1px solid var(--morado);    /* Borde fino morado */
+  color: var(--blanco);               /* Texto blanco */
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 10px 0;
+  outline: none;                      /* Quita borde azul de focus */
+  transition: border 0.3s ease;
+}
+
+#contacto form input:focus,
+#contacto form textarea:focus {
+  border: 1px solid var(--Verde);     /* Verde al enfocar */
+}
+
+#contacto form button {
+  background: var(--morado);
+  color: var(--blanco);
+  font-size: 1.2rem;     /* Tamaño de letra más grande */
+  font-weight: bold;     /* Negrita */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#contacto form button:hover {
+  background: var(--Verde); /* Cambia a verde al pasar el mouse */
+  color: var(--fondo);
+}
+
+
+
+
+
+
+

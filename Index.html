@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >Portafolio - Melina Soto</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ====== Header / Inicio ====== -->
+  <nav id="nav-linksBox">
+  <ul class="nav-links">
+    <li><a href="#acerca">Acerca de mí</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<header id="inicio">
+  <h1 class="logo">Melina Soto Badilla</h1>
+  <div class="hero">
+    <img id="foto" src="MiFoto.jpeg" alt="">
+    <h2>Estudiante de Ingeniería de Software</h2>
+  </div>
+</header>
+
+
+
+  <!-- ====== Acerca de mí ====== -->
+  <section id="acerca">
+    <h2 class="Titulos">Acerca de mí</h2>
+    <p>
+      Mi nombre es Melina Soto, soy estudiante de Ingeniería de Software en la Universidad Cenfotec.
+      Me apasiona crear soluciones innovadoras y efectivas, con experiencia en proyectos como un guante
+      traductor de LESCO y una mesa interactiva para niños. Mi objetivo es contribuir al desarrollo de
+      software de manera profesional y creativa.
+    </p>
+  </section>
+
+  <!-- ====== Habilidades ====== -->
+  <section id="habilidades">
+    <h2 class="Titulos">Habilidades</h2>
+    <div class="skills-container">
+      <div class="skill-card">
+        <h3>Técnicas</h3>
+        <ul>
+          <li>Python, Java, C#</li>
+          <li>SQL, HTML, CSS, JavaScript</li>
+          <li>Linux Shell, Redes (CCNA)</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <h3>Blandas</h3>
+        <ul>
+          <li>Trabajo en equipo</li>
+          <li>Comunicación efectiva</li>
+          <li>Pensamiento crítico</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Proyectos ====== -->
+  <section id="proyectos">
+    <h2 class="Titulos" >Proyectos</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="assets/img/guante.jpg" alt="Guante traductor de LESCO">
+        <h3>Guante traductor de LESCO</h3>
+        <p>Dispositivo IoT para traducir señas del abecedario LESCO a texto.</p>
+        <p><strong>Tecnologías:</strong> Python, Flask, CircuitPython</p>
+      </div>
+      <div class="project-card">
+        <img src="assets/img/mesa.jpg" alt="Mesa interactiva">
+        <h3>Mesa interactiva</h3>
+        <p>Mesa digital para aprendizaje interactivo de niños.</p>
+        <p><strong>Tecnologías:</strong> C#, Unity</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Formación académica ====== -->
+  <section id="formacion">
+    <h2 class="Titulos" >Formación Académica</h2>
+    <ul>
+      <li><strong>Bachillerato en Ingeniería de Software</strong> - Universidad Cenfotec (En curso)</li>
+      <li><strong>Certificaciones:</strong> Linux Shell, Ciberseguridad, CCNA</li>
+    </ul>
+    <div class="cv-buttons">
+      <a href="assets/cv-es.pdf" class="btn" download>Descargar CV Español</a>
+      <a href="assets/cv-en.pdf" class="btn" download>Descargar CV Inglés</a>
+    </div>
+  </section>
+
+  <!-- ====== Contacto ====== -->
+  <section id="contacto">
+    <h2 class="Titulos" >Contacto</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <textarea name="message" placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Melina Soto | Desarrollado con 💜 y HTML + CSS</p>
+  </footer>
+
+</body>
+</html>
