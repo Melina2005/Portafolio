@@ -458,7 +458,8 @@ html {
     cursor: pointer;
     display: block;
     margin: 10px auto;
-    z-index: 1001; /* Encima del menú */
+    z-index: 2000;  /* Encima del menú */
+    position: relative; /* Asegura que z-index funcione */
   }
 
   .nav-links {
@@ -474,6 +475,7 @@ html {
     text-align: left;
     transition: right 0.3s ease-in-out;
     z-index: 1000;
+    
   }
 
   .nav-links.active {
