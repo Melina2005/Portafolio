@@ -10,22 +10,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="crescent.png" type="image/png">
 
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 
 </head>
 <body>
+  <div id="particles-js"></div>
+
 
   <!-- ====== Header / Inicio ====== -->
   <nav id="nav-linksBox">
-  <ul class="nav-links">
-  <li><a href="#acerca">Acerca de mí</a></li>
-  <li><a href="#habilidades">Habilidades</a></li>
-  <li><a href="#proyectos">Proyectos</a></li>
-  <li><a href="#formacion">Formación</a></li>
-  <li><a href="#certificaciones">Certificaciones</a></li>
-  <li><a href="#contacto">Contacto</a></li>
-</ul>
-
+  <div class="nav-header">
+    <button class="nav-toggle" id="navToggle">
+      ☰
+    </button>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#acerca">Acerca de mí</a></li>
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#formacion">Formación</a></li>
+    <li><a href="#certificaciones">Certificaciones</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
 </nav>
+
 
 <header id="inicio">
   <h1 class="logo">Melina Soto Badilla</h1>
@@ -67,10 +76,10 @@
     Mi experiencia académica y proyectos personales me han permitido trabajar con tecnologías como <strong>HTML, CSS, JavaScript, C# y Python</strong>, además de desarrollar aplicaciones web, implementar APIs y gestionar datos. También he explorado áreas como <strong>inteligencia artificial y desarrollo con hardware</strong>, integrando programación con dispositivos físicos.
   </p>
   <p>
-    En mis tiempos libres participo activamente en un <strong>club de programación</strong>, donde colaboro con otros desarrolladores en retos y proyectos que fortalecen mis habilidades técnicas y de trabajo en equipo. Me motiva aprender de otros, aportar soluciones y mantenerme al día con las tendencias tecnológicas.
+    En mis tiempos libres participo activamente en el club de programación<strong> ICPC</strong>, donde resuelvo junto a otros desarrolladores retos que fortalecen mis habilidades técnicas y de trabajo en equipo. Me motiva aprender de otros, aportar soluciones y mantenerme al día con las tendencias tecnológicas.
   </p>
   <p>
-    Fuera de la programación, me apasionan actividades que requieren precisión y creatividad, como <strong>tocar el piano, resolver rompecabezas, armar proyectos manuales y cultivar plantas</strong>. Creo que la curiosidad, la disciplina y la creatividad son pilares esenciales para crecer como profesional y como persona.
+    Fuera de la programación, me apasionan actividades que requieren precisión y creatividad, como <strong>resolver rompecabezas, armar proyectos manuales y cultivar plantas</strong>. Creo que la curiosidad, la disciplina y la creatividad son pilares esenciales para crecer como profesional y como persona.
   </p>
   </section>
 
@@ -184,7 +193,7 @@
         </div>
         <div class="card-back">
           <p><strong>Nombre:</strong> Gestor de Acciones</p>
-          <p><strong>Descripción:</strong> Proyecto de trading con roles de usuario diferenciados, permitiendo a los clientes comprar y vender acciones, y a los asesores brindar orientación. Las transacciones se realizan a través de la integración de PayPal.</p>
+          <p><strong>Descripción:</strong> Como developer, contribuí al desarrollo de una plataforma de trading con roles de usuario y asesoría. El sistema permite la compra y venta de acciones con integración de PayPal para transacciones.</p>
           <p><strong>Tecnologías:</strong> C#, JavaScript, css, HTML</p>
           <a href=" https://github.com/olazochavesaxel/Proyecto2FinalGrupo4" target="_blank" class="btn-tarjeta">
         Explorar
@@ -263,7 +272,7 @@
   <!-- Popup de Gracias -->
   <div id="popupGracias" class="popup">
     <div class="popup-content">
-      <h3>¡Gracias por tu mensaje! 💌</h3>
+      <h3>¡Gracias por tu mensaje!</h3>
       <p>Te responderé lo antes posible.</p>
       <button id="cerrarPopup" class="btn">Cerrar</button>
     </div>
@@ -346,6 +355,53 @@
   });
 </script>
 
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+</script>
+
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 50 },
+      color: { value: "#80009d" }, /* Morado principal */
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#906e00", /* Verde/dorado para contraste */
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
+      },
+      modes: {
+        repulse: { distance: 100 },
+        push: { particles_nb: 4 }
+      }
+    },
+    retina_detect: true
+  });
+</script>
 
 
 </body>
