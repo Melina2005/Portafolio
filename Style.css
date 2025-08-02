@@ -52,6 +52,8 @@ nav ul li a:hover {
   background: var(--morado); /* Color base morado */
   color: var(--blanco);
   padding: 10px 20px;
+   font-size: 1.2rem;     /* Tamaño de letra más grande */
+  font-weight: bold; 
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease, color 0.3s ease; /* Transición suave */
@@ -159,6 +161,11 @@ html {
   display: block;
   margin: 20px auto;
 }
+#contacto form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos hijos horizontalmente */
+}
 
 #contacto form input,
 #contacto form textarea {
@@ -181,19 +188,261 @@ html {
 #contacto form button {
   background: var(--morado);
   color: var(--blanco);
-  font-size: 1.2rem;     /* Tamaño de letra más grande */
-  font-weight: bold;     /* Negrita */
+  font-size: 1.2rem;
+  font-weight: bold;
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s ease, color 0.3s ease;
+  width: auto; /* Mantiene tamaño adaptado al texto */
 }
 
 #contacto form button:hover {
   background: var(--Verde); /* Cambia a verde al pasar el mouse */
   color: var(--fondo);
 }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: var(--morado);
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--Verde);
+  transform: scale(1.2);
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card {
+  background: transparent;
+  width: 250px;
+  height: 300px;
+  perspective: 1000px; /* Profundidad para el flip */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta reverso cuando no está activo */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Cara frontal */
+.card-front {
+  background: #1e1e1e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+/* Cara trasera */
+.card-back {
+  background: var(--morado);
+  color: white;
+  transform: rotateY(180deg);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cert-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cert-card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  border: 1px solid var(--morado);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.cert-card i {
+  font-size: 2rem;
+  color: var(--morado);
+  margin-bottom: 10px;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--Verde);
+}
+
+.skills-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skill-card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  border: 1px solid var(--morado);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card h3 {
+  color: var(--morado);
+  margin-bottom: 10px;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  color: var(--blanco);
+}
+
+.skill-card li {
+  margin: 5px 0;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--Verde);
+}
+
+
+/* Popup oculto por defecto */
+.popup {
+  display: none; 
+  position: fixed;
+  top: 0; left: 0; 
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center; 
+  align-items: center;
+  z-index: 2000;
+}
+
+.popup-content {
+  background: #1e1e1e;
+  padding: 20px;
+  border: 2px solid var(--morado);
+  border-radius: 10px;
+  text-align: center;
+  color: var(--blanco);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  max-width: 300px;
+}
+
+.popup .btn {
+  margin-top: 10px;
+}
+
+.cv-buttons {
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  gap: 15px;               /* Espacio entre botones */
+  margin-top: 20px;        /* Espacio arriba */
+  flex-wrap: wrap;         /* Permite que se acomoden en móvil */
+}
+
+.cv-buttons .btn {
+  min-width: 150px;        /* Tamaño mínimo igual */
+  text-align: center;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-tarjeta {
+  display: block;
+  background: #ffcc00; /* Amarillo */
+  color: #000;         /* Texto negro para contraste */
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 15px auto 0 auto; /* Centrado y margen arriba */
+  width: 80%; /* Botón más ancho pero sin ocupar todo */
+  transition: background 0.3s ease, transform 0.2s ease;
+  position: absolute;
+  bottom: 15px; /* Pegado a la parte inferior de la tarjeta */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-tarjeta:hover {
+  background: #ad8f16; /* Amarillo más oscuro al pasar mouse */
+  transform: translateX(-50%) scale(1.05); /* Efecto ligero zoom */
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Se ajusta dinámicamente */
+  gap: 20px;
+  justify-items: center; /* Centra tarjetas cuando no llenan la fila */
+}
+
+.project-card {
+  width: 100%;
+  max-width: 300px;
+}
+
+
+
+
 
 
 
