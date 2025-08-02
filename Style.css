@@ -122,14 +122,11 @@ html {
   position: sticky;    /* Hace que se quede fijo al hacer scroll */
   top: 0;              /* Siempre en la parte superior */
   padding: 10px 0;
-  background-color: rgba(30,30,30,0.85);
+  background-color: rgba(30, 30, 30, 0.7); /* Oscuro pero transparente */
   z-index: 1000;       /* Para que quede encima del contenido */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-  backdrop-filter: blur(15px); /* Desenfoque bonito */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Sombra para destacar */
   
 }
-
-
 
 #nav-linksBox .nav-links {
   list-style: none;
@@ -582,17 +579,3 @@ html {
   z-index: -1; /* Queda detrás de todo el contenido */
   background: var(--fondo); /* Tu color de fondo */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
